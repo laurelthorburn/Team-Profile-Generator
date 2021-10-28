@@ -7,28 +7,68 @@ const promptUser = () => {
   return inquirer.prompt([
     {
         type: "input",
-        name: "name",
-        message: "What is the employee's name?"
+        name: "managerName",
+        message: "What is the team manager's name?"
+    },
+    {
+        type: "input",
+        name: "managerID",
+        message: "What is the team manager's employee ID?"
+    },
+    {
+        type: "input",
+        name: "managerEmail",
+        message: "What is the team manager's email address?"
+    },
+    {
+        type: "input",
+        name: "managerOffice",
+        message: "What is the team manager's office number?"
     },
     {
         type: "list",
         name: "job", 
-        choices: ["Manager", "Engineer", "Intern"]
+        choices: ["Engineer", "Intern", "Finish building my team."]
     },
     {
         type: "input",
-        name: "email",
-        message: "What is the employee's email?"
+        name: "engName",
+        message: "What is the engineer's name?"
     },
     {
         type: "input",
-        name: "github",
-        message: "What is the employee's github username?"
+        name: "engID",
+        message: "What is the team engineer's employee ID?"
+    },
+    {
+        type: "input",
+        name: "engEmail",
+        message: "What is the engineer's email address?"
+    },
+    {
+        type: "input",
+        name: "engGit",
+        message: "What is the engineer's github username?"
+    },
+    {
+        type: "input",
+        name: "internName",
+        message: "What is the intern's name?"
+    },
+    {
+        type: "input",
+        name: "internID",
+        message: "What is the team intern's employee ID?"
+    },
+    {
+        type: "input",
+        name: "internEmail",
+        message: "What is the intern's email address?"
     },
     {
         type: "input",
         name: "school",
-        message: "What is the inter's school?"
+        message: "What is the intern's school?"
     },
   ]);
 };
@@ -94,59 +134,109 @@ const licenseBadge = (copyright) => {
 }
 
 
-const generateHTML = ({ title, description, installation, contributing, email, github, tests, license, usage }) =>
-  `# ${title}
-
-<a name="descsection"></a>
-## Description
-${description}  
-
-${licenseBadge(license)}
-
-
-## Table of Contents
-1. [ Description. ](#descsection)
-2. [ Installation. ](#installsection)
-3. [ Usage. ](#usagesection)
-4. [ License. ](#licensesection)
-5. [ Contributing. ](#contribsection)
-6. [ Tests. ](#testsection)
-7. [ Questions. ](#questionssection)
-
-<a name="installsection"></a>
-## Installation
-${installation}
-
-<a name="usagesection"></a>
-## Usage
-${usage}
-
-<a name="licensesection"></a>
-## License
-${copyrightText(license)}
-
-  <a name="contribsection"></a>
-## Contributing
+const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =>
+  `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="./Assets/style.css">
+      <title>Team Generator</title>
+  </head>
+  <body>
   
-  * ${contributing}
+      <header>
+        My Team  
+      </header>
+      
+  <main>
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            ${managerName}<br>
+            Employer Icon & Manager
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${managerID}</li>
+            <li class="list-group-item">EMAIL: ${managerEmail}</li>
+            <li class="list-group-item">Office Number: ${managerOffice}</li>
+          </ul>
+        </div>
+  
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Employer name<br>
+            Employer Icon & Employer Role
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: NUMBER</li>
+            <li class="list-group-item">EMAIL: email here</li>
+            <li class="list-group-item">Office Number/Github/University</li>
+          </ul>
+        </div>
+  
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Employer name<br>
+            Employer Icon & Employer Role
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: NUMBER</li>
+            <li class="list-group-item">EMAIL: email here</li>
+            <li class="list-group-item">Office Number/Github/University</li>
+          </ul>
+        </div>
+  
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Employer name<br>
+            Employer Icon & Employer Role
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: NUMBER</li>
+            <li class="list-group-item">EMAIL: email here</li>
+            <li class="list-group-item">Office Number/Github/University</li>
+          </ul>
+        </div>
+  
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Employer name<br>
+            Employer Icon & Employer Role
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: NUMBER</li>
+            <li class="list-group-item">EMAIL: email here</li>
+            <li class="list-group-item">Office Number/Github/University</li>
+          </ul>
+        </div>
+  
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Employer name<br>
+            Employer Icon & Employer Role
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: NUMBER</li>
+            <li class="list-group-item">EMAIL: email here</li>
+            <li class="list-group-item">Office Number/Github/University</li>
+          </ul>
+        </div>
+  
+        </main>
+  </body>
+  </html>
 
-  <a name="testsection"></a>
-## Tests
-  ${tests}
 
-  <a name="questionssection"></a>
-## Questions?
-  Want to see more of my work? [Click here!](https://github.com/${github})
-
-  Questions/comments/concerns? Please send an email to ${email}
   `; 
 
 // Bonus using writeFileSync as a promise
 const init = () => {
   promptUser()
   // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README.md', generateHTML(answers)))
-    .then(() => console.log('Successfully wrote to README.md'))
+    .then((answers) => fs.writeFileSync('./dist/index.html', generateHTML(answers))) //confirm i go to the right place
+    .then(() => console.log('Successfully wrote to index.html'))
     .catch((err) => console.error(err));
 };
 
