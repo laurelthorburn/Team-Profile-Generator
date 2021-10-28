@@ -12,3 +12,19 @@ header {
     font-size: 32px;
     padding: 50px;
 }
+
+.card-header {
+    background-color: rgba(95, 158, 160, 0.632);
+    color: whitesmoke
+}
+
+main {
+    display: flex;
+}
+
+.card {
+    flex-wrap: wrap;
+    margin: 100px;
+}
+
+/* i don't work (wrap) */
