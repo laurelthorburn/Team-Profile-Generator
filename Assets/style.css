@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: cadetblue;
+    height: 150px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    padding: 50px;
+}
