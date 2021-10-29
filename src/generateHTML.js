@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =>
+  `<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -17,13 +18,13 @@
   <main>
       <div class="card" style="width: 18rem;">
           <div class="card-header">
-            Tami<br>
+            ${managerName}<br>
             Employer Icon & Manager
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: 754</li>
-            <li class="list-group-item">EMAIL: tami@gmail.com</li>
-            <li class="list-group-item">Office Number: FRNK 1</li>
+            <li class="list-group-item">ID: ${managerID}</li>
+            <li class="list-group-item">EMAIL: ${managerEmail}</li>
+            <li class="list-group-item">Office Number: ${managerOffice}</li>
           </ul>
         </div>
   
@@ -92,4 +93,4 @@
   </html>
 
 
-  
+  `; 
