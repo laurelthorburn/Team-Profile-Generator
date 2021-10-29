@@ -1,40 +1,44 @@
+const { it } = require("@jest/globals");
 const Employee = require("../lib/Employee"); //make sure right file path!
 
 describe("Employee class", () => {
-    describe("getName method", () => {
-      it("stores the employee's name", () => {
-        const employee = new Employee("Robert");
-        expect(employee.getName()).toBe("Robert")
-      });
-  
-      it("getID", () => {
-        const employee = new Employee("Robert", 5);
-        expect(employee.getId()).toBe(5)
-      });
-
-      it("getEmail", () => {
-        const employee = new Employee("Robert", 5, "joe@gmail.com");
-        expect(employee.getEmail()).toBe("joe@gmail.com")
-
+  //testing methods
+  describe("getName method", () => {
+    // when we create a new class = creating an obj, bc creating new obj we can use the typeof to check that. (instantiations)
+    it("can instantiate a new Employee", () => {
+      const employee = new Employee();
+      expect(typeof employee).toBe("object");
+    });
+    it("stores the employee's name", () => {
+      const employee = new Employee("Robert");
+      expect(employee.getName()).toBe("Robert");
     });
 
+    it("getID", () => {
+      const employee = new Employee("Robert", 5);
+      expect(employee.getId()).toBe(5);
+    });
+
+    it("getEmail", () => {
+      const employee = new Employee("Robert", 5, "joe@gmail.com");
+      expect(employee.getEmail()).toBe("joe@gmail.com");
+    });
+    // testing constructor
     it("getRole", () => {
-        const employee = new Employee("Robert", 5, "joe@gmail.com", "Employee");
-        expect(employee.getRole()).toBe("Employee")
+      const employee = new Employee("Robert", 5, "joe@gmail.com");
+      expect(employee.getRole()).toBe("Employee");
     });
-
+    it("can set name", () => {
+      const employee = new Employee("Robert");
+      expect(employee.name).toBe("Robert");
     });
-  
+    it("can set id", () => {
+      const employee = new Employee("Robert", 5);
+      expect(employee.id).toBe(5);
+    });
+    it("can set email", () => {
+      const employee = new Employee("Robert", 5, "joe@gmail.com");
+      expect(employee.email).toBe("joe@gmail.com");
+    });
   });
-  
-
-//   describe("replenishStock method", () => {
-//     it("increases count", () => {
-//       const store = new Store("Big Al's Toy Barn", [
-//         { name: "Action Figure", price: 5.0, count: 1 }
-//       ]);
-//       store.replenishStock("Action Figure", 2);
-//       expect(store.stock[0].count).toBe(3);
-//     });
-//   });
-// });
+});

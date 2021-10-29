@@ -1,25 +1,12 @@
-const Employee = require("../lib/Employee"); //make sure right file path!
+const Manager = require("../lib/Manager"); //make sure right file path!
 
-describe("Employee class", () => {
-    describe("getName method", () => {
-      it("stores the employee's name", () => {
-        const employee = new Employee("Robert");
-        expect(employee.getName()).toBe("Robert")
-      });
-  
-      it("getID", () => {
-
-      });
-
-      it("getEmail", () => {
-
-    });
-
-    it("getRole", () => {
-
-    });
-
-    });
-  
+//need getSchool and getRole
+test('return manager\'s office number', () => {
+    const manager = new Manager("Robert", 5, "joe@gmail.com", 4);
+    expect(manager.officeNumber).toBe(4);
   });
-  
+
+test('return manager\'s role', () => {
+    const manager = new Manager("Robert", 5, "joe@gmail.com", 4);
+    expect(manager.getRole()).toBe("Manager");
+  });  

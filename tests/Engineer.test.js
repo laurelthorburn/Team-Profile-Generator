@@ -1,25 +1,46 @@
-const Employee = require("../lib/Employee"); //make sure right file path!
+const { it } = require("@jest/globals");
+const Engineer = require("../lib/Engineer"); //make sure right file path!
 
-describe("Employee class", () => {
+describe("Engineer class", () => {
+    //testing methods
     describe("getName method", () => {
-      it("stores the employee's name", () => {
-        const employee = new Employee("Robert");
-        expect(employee.getName()).toBe("Robert")
+    // when we create a new class = creating an obj, bc creating new obj we can use the typeof to check that. (instantiations)
+    it("can instantiate a new Engineer", () => {
+        const engineer = new Engineer();
+        expect(typeof(engineer)).toBe("object");
+    });
+      it("stores the Engineer's name", () => {
+        const engineer = new Engineer("Robert");
+        expect(engineer.getName()).toBe("Robert");
       });
   
       it("getID", () => {
-
+        const engineer = new Engineer("Robert", 5);
+        expect(engineer.getId()).toBe(5);
       });
 
       it("getEmail", () => {
+        const engineer = new Engineer("Robert", 5, "joe@gmail.com");
+        expect(engineer.getEmail()).toBe("joe@gmail.com");
 
     });
-
+// testing constructor
     it("getRole", () => {
-
+        const engineer = new Engineer("Robert", 5, "joe@gmail.com");
+        expect(engineer.getRole()).toBe("Engineer");
     });
-
+    it("can set name", () => {
+        const engineer = new Engineer("Robert");
+        expect(engineer.name).toBe("Robert");
+    });
+    it("can set id", () => {
+        const engineer = new Engineer("Robert", 5);
+        expect(engineer.id).toBe(5);
+    });
+    it("can set email", () => {
+        const engineer = new Engineer("Robert", 5, "joe@gmail.com");
+        expect(engineer.email).toBe("joe@gmail.com");
+    });
     });
   
   });
-  
