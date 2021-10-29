@@ -32,12 +32,15 @@ function promptManager() {
         message: "What is the team manager's office number?"
     },
   ])
+ 
   .then((answers) => {
     //manipulate data here, at end call next function
+    //this is where i will store the answers
+    promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
 };
-
+// User choice path
 function promptContinue(){
   return inquirer.prompt([
   {
@@ -47,11 +50,20 @@ function promptContinue(){
   },
 ])
 .then((answers) => {
+  console.log(answers)
   //manipulate data here, at end call next function
+  if(answers.job === "Engineer"){
+    promptEngineer();
+  } else if (answers.job === "Intern"){
+    promptIntern();
+  } else {
+    generateHTML();
+    console.log("get outta here loser, you're fired!")
+  }
   //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
 })
 };
-
+//engineer prompt questions built into a function
 function promptEngineer(){
   return inquirer.prompt([
 {
@@ -77,10 +89,12 @@ function promptEngineer(){
   ])
   .then((answers) => {
     //manipulate data here, at end call next function
+    promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
 };
 
+//intern prompt questions built into a function
 function promptIntern(){
   return inquirer.prompt([
 {
@@ -107,108 +121,14 @@ function promptIntern(){
 .then((answers) => {
 
   //manipulate data here, at end call next function
+  promptContinue();
   //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
 })
 };
 
-
-const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =>
-  `<!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="./Assets/style.css">
-      <title>Team Generator</title>
-  </head>
-  <body>
-  
-      <header>
-        My Team  
-      </header>
-      
-  <main>
-      <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            ${managerName}<br>
-            Employer Icon & Manager
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${managerID}</li>
-            <li class="list-group-item">EMAIL: ${managerEmail}</li>
-            <li class="list-group-item">Office Number: ${managerOffice}</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        </main>
-  </body>
-  </html>
-
-
-  `; 
-
+function generateHTML(){
+  console.log("take 2...");
+}
 // Bonus using writeFileSync as a promise
 // const init = () => {
 //   promptManager()
@@ -216,7 +136,7 @@ const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =
 //   // Use writeFileSync method to use promises instead of a callback function
 //     .then((answers) => fs.writeFileSync('./dist/index.html', generateHTML(answers))) //confirm i go to the right place
 //     .then(() => console.log('Successfully wrote to index.html'))
-//     .catch((err) => console.error(err));
+//     .catch((err) => consle.error(err));
 // };
 
 //answers.manager - instantiate a new manager with this name 
