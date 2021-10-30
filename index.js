@@ -5,6 +5,8 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+const employeeArray = [];
+
 //begin function with manager questions
 promptManager()
 
@@ -34,8 +36,12 @@ function promptManager() {
   ])
  
   .then((answers) => {
-    //manipulate data here, at end call next function
-    //this is where i will store the answers
+    const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
+    //want to push little manager storing in an mega array and then later will pull from the mega array to create the cards
+
+    //pushing the manager into the mega array named employeeArray
+    employeeArray.push(manager)
+    console.log(employeeArray)
     promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
@@ -51,7 +57,6 @@ function promptContinue(){
 ])
 .then((answers) => {
   console.log(answers)
-  //manipulate data here, at end call next function
   if(answers.job === "Engineer"){
     promptEngineer();
   } else if (answers.job === "Intern"){
@@ -60,7 +65,6 @@ function promptContinue(){
     generateHTML();
     console.log("get outta here loser, you're fired!")
   }
-  //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
 })
 };
 //engineer prompt questions built into a function
@@ -88,7 +92,10 @@ function promptEngineer(){
     },
   ])
   .then((answers) => {
+    const engineer = new Engineer(answers.engName, answers.engID, answers.engEmail, answers.engGit);
     //manipulate data here, at end call next function
+    employeeArray.push(engineer);
+    console.log(employeeArray);
     promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
@@ -119,7 +126,10 @@ function promptIntern(){
 },
 ])
 .then((answers) => {
-
+  const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
+  //manipulate data here, at end call next function
+  employeeArray.push(engineer);
+  console.log(employeeArray);
   //manipulate data here, at end call next function
   promptContinue();
   //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
