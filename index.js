@@ -26,7 +26,6 @@ function promptContinue(){
   } else if (answers.job === "Intern"){
     promptIntern();
   } else {
-    console.log(employeeArray)
     //calling file and then calling function w/in said file
     generate(employeeArray);
     console.log("great job building your team")

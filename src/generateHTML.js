@@ -1,45 +1,72 @@
-const generateHTML = (employeeArray) => {
-console.log(employeeArray);
-  `<!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="./Assets/style.css">
-      <title>Team Generator</title>
-  </head>
-  <body>
-  
-      <header>
-        My Team  
-      </header>
-      
 
-<div class="row row-cols-1 row-cols-md-2">
-  <div class="col mb-4">
+var htmlText =  `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <title>Team Generator</title>
+</head>
+<body>
+
+    <header>
+      My Team  
+    </header>
+    
+<div class="row row-cols-1 row-cols-md-2">\n`
+
+
+//creating new cards
+const generateHTML = (employeeArray) => {
+//loop through employee array and create a card
+//each card within a backtick, take all of that content and do += to that variable we have above
+//at the end of that loop, += the ending code
+employeeArray.forEach(element => {
+    htmlText += ` <div class="col mb-4">
     <div class="card">
       <div class="card-header">
-            ${employeeArray[0].getName()} <br>
-              Employer Icon & ${employeeArray[0].getRole()}
+            ${element.getName()} <br>
+              Employer Icon & ${element.getRole()}
       </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${employeeArray[0].getId()}</li>
-                <li class="list-group-item">EMAIL: ${employeeArray[0].getEmail()}</li>
-                <li class="list-group-item">Office Number: ${employeeArray[0].getOfficeNumber()}</li>
-              </ul>
-    </div>
-    </div>
-  </div>
+                <li class="list-group-item">ID: ${element.getId()}</li>
+                <li class="list-group-item">EMAIL: ${element.getEmail()}</li>\n`
+                if(element.getRole() === "Manager"){
+                    htmlText += `<li class="list-group-item">OFFICE NUMBER: ${element.getOfficeNumber()}</li>\n`
+                } else if(element.getRole() === "Engineer"){
+                    htmlText += `<li class="list-group-item">GitHub Username: <a href="https://github.com/${element.getGitHub()}">${element.getGitHub()}</a></li>\n`
+                }
+                if(element.getRole() === "Intern"){
+                    htmlText += `<li class="list-group-item">School: ${element.getSchool()}</li>\n`
+                }
+                htmlText += `</ul></div></div></div></div></body></html>` //check, might have too many div's lol
+});
+//writing html to a file
 
-          </div>
-  </div>
+fs.writeFileSync('./dist/index.html', htmlText);
 
-  </body>
-  </html>
-  `}; 
+}
+
+
+
+module.exports = generateHTML;
+
+
+// function filterEngineer(employeeArray){
+//     console.log(employeeArray.Engineer)
+//     return employeeArray.Engineer
+
+// };
+// function filterIntern(employeeArray){
+//     console.log(employeeArray.Intern)
+//     return employeeArray.Intern
+// };
+
+
+// }; 
 
 // function employeeChoice(){
 //     `<div class="col mb-4">
@@ -57,11 +84,6 @@ console.log(employeeArray);
 //       </div>
 //     </div>
 //   </div>`
-// }
 
 
 
-
-  module.exports = generateHTML;
-
- // first, is there data past [0], if so we need to push each new array [1+] to its own card until meet array.length.. remember we did grab array.length so we can generate until === array.length
