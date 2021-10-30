@@ -1,3 +1,5 @@
+
+
 const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =>
   `<!DOCTYPE html>
   <html lang="en">
@@ -94,3 +96,6 @@ const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =
 
 
   `; 
+
+
+  module.exports = {generateHTML};
