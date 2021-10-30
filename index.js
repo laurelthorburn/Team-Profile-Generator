@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -27,7 +26,7 @@ function promptContinue(){
     promptIntern();
   } else {
     //calling file and then calling function w/in said file
-    generate(employeeArray);
+    generate.generateHTML(employeeArray);
     console.log("great job building your team")
   }
 })
@@ -133,13 +132,6 @@ function promptIntern(){
   promptContinue();
 })
 };
-
-  // Bonus using writeFileSync as a promise
-  // Use writeFileSync method to use promises instead of a callback function
-
-// fs.writeFileSync('./dist/index.html', generateHTML(finalAnswers))
-
-// console.log("Your team is now on display, navigate to the folder 'dist' and then click 'index.html'.  Great work!")
 
 
 

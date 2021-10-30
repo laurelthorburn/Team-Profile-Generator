@@ -1,4 +1,6 @@
 
+const fs = require('fs');
+
 var htmlText =  `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,26 +35,31 @@ employeeArray.forEach(element => {
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${element.getId()}</li>
-                <li class="list-group-item">EMAIL: ${element.getEmail()}</li>\n`
+                <li class="list-group-item">Email:<a href = "mailto: ${element.getEmail()}"> ${element.getEmail()}</a></li>\n`
                 if(element.getRole() === "Manager"){
-                    htmlText += `<li class="list-group-item">OFFICE NUMBER: ${element.getOfficeNumber()}</li>\n`
+                    htmlText += `<li class="list-group-item">Office Number: ${element.getOfficeNumber()}</li>\n`
                 } else if(element.getRole() === "Engineer"){
-                    htmlText += `<li class="list-group-item">GitHub Username: <a href="https://github.com/${element.getGitHub()}">${element.getGitHub()}</a></li>\n`
-                }
-                if(element.getRole() === "Intern"){
+                    htmlText += `<li class="list-group-item">GitHub Username: <a href="https://github.com/${element.getGitHub()}" target="_blank">${element.getGitHub()}</a></li>\n`
+                } else if(element.getRole() === "Intern"){
                     htmlText += `<li class="list-group-item">School: ${element.getSchool()}</li>\n`
                 }
-                htmlText += `</ul></div></div></div></div></body></html>` //check, might have too many div's lol
+                htmlText += `</ul></div></div></div>\n`
 });
-//writing html to a file
+
+htmlText += `</div></body></html>` //check, might have too many div's lol
+//writing html variable (we added onto it above) to a file
 
 fs.writeFileSync('./dist/index.html', htmlText);
+
+console.log("Your team is now on display, navigate to the folder 'dist' and then click 'index.html'.  Great work!")
 
 }
 
 
 
-module.exports = generateHTML;
+module.exports = {
+    generateHTML,
+};
 
 
 // function filterEngineer(employeeArray){
