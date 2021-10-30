@@ -4,7 +4,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const generate = require("./src/generateHTML")
+const generate = require("./src/generateHTML");
 
 const employeeArray = [];
 
@@ -26,8 +26,9 @@ function promptContinue(){
   } else if (answers.job === "Intern"){
     promptIntern();
   } else {
+    console.log(employeeArray)
     //calling file and then calling function w/in said file
-    generate.generateHTML(employeeArray, employeeArray.length);
+    generate(employeeArray);
     console.log("great job building your team")
   }
 })
