@@ -1,6 +1,7 @@
 
 
-const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =>
+const generateHTML = (employeeArray) =>
+console.log(employeeArray[0].getName());
   `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -17,84 +18,43 @@ const generateHTML = ({ managerName, managerID, managerEmail, managerOffice }) =
         My Team  
       </header>
       
-  <main>
-      <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            ${managerName}<br>
-            Employer Icon & Manager
+
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-header">
+            ${employeeArray[0].getName()} <br>
+              Employer Icon & ${employeeArray[0].getRole()}
+      </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${employeeArray[0].getId()}</li>
+                <li class="list-group-item">EMAIL: ${employeeArray[0].getEmail()}</li>
+                <li class="list-group-item">Office Number: ${employeeArray[0].getOfficeNumber()}</li>
+              </ul>
+    </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+          <div class="card">
+            <div class="card-header">
+              Employer name<br>
+              Employer Icon & Employer Role
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: NUMBER</li>
+                <li class="list-group-item">EMAIL: email here</li>
+                <li class="list-group-item">Office Number/Github/University</li>
+              </ul>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${managerID}</li>
-            <li class="list-group-item">EMAIL: ${managerEmail}</li>
-            <li class="list-group-item">Office Number: ${managerOffice}</li>
-          </ul>
         </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Employer name<br>
-            Employer Icon & Employer Role
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: NUMBER</li>
-            <li class="list-group-item">EMAIL: email here</li>
-            <li class="list-group-item">Office Number/Github/University</li>
-          </ul>
-        </div>
-  
-        </main>
+  </div>
+
   </body>
   </html>
-
-
   `; 
 
 

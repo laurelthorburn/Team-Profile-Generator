@@ -21,7 +21,6 @@ function promptContinue(){
   },
 ])
 .then((answers) => {
-  console.log(answers)
   if(answers.job === "Engineer"){
     promptEngineer();
   } else if (answers.job === "Intern"){
@@ -141,7 +140,6 @@ function promptIntern(){
 // fs.writeFileSync('./dist/index.html', generateHTML(finalAnswers))
 
 // console.log("Your team is now on display, navigate to the folder 'dist' and then click 'index.html'.  Great work!")
-
 
 
 
