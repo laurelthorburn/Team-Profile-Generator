@@ -41,7 +41,7 @@ function promptManager() {
 
     //pushing the manager into the mega array named employeeArray
     employeeArray.push(manager)
-    console.log(employeeArray)
+    console.log("welcome to the team, manager")
     promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
@@ -63,7 +63,7 @@ function promptContinue(){
     promptIntern();
   } else {
     generateHTML();
-    console.log("get outta here loser, you're fired!")
+    console.log("great job building your team")
   }
 })
 };
@@ -95,7 +95,7 @@ function promptEngineer(){
     const engineer = new Engineer(answers.engName, answers.engID, answers.engEmail, answers.engGit);
     //manipulate data here, at end call next function
     employeeArray.push(engineer);
-    console.log(employeeArray);
+    console.log("welcome to the team, engineer");
     promptContinue();
     //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
   })
@@ -128,8 +128,8 @@ function promptIntern(){
 .then((answers) => {
   const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
   //manipulate data here, at end call next function
-  employeeArray.push(engineer);
-  console.log(employeeArray);
+  employeeArray.push(intern);
+  console.log("welcome to the team, intern");
   //manipulate data here, at end call next function
   promptContinue();
   //array of employees and push data into an array and then called continue, 3 choices and if else if for 3 branches... if finish then generate HTML
