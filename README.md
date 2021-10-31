@@ -105,7 +105,12 @@ git push origin yourname-branch
 
   <a name="testsection"></a>
 ## Tests
-  None at this time.
+  1. Ensure you have installed jest (this was installed earlier when 'npm install' was run in the command line)
+  2. In the command line, write:
+```
+npm run test
+```
+  3. Confirm all four test folders pass. Test folders are located in the tests folder and are titled: Employee.test.js, Engineer.test.js, Intern.test.js, and Manager.test.js
 
   <a name="questionssection"></a>
 ## Questions?
