@@ -5,15 +5,26 @@
 
 header {
     background-color: cadetblue;
-    height: 150px;
+    height: 125px;
     width: 100%;
     color: white;
     text-align: center;
     font-size: 32px;
-    padding: 50px;
+    padding: 40px;
+    margin-bottom: 25px;
 }
 
 .card-header {
     background-color: rgba(95, 158, 160, 0.632);
     color: whitesmoke
+}
+
+.row{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    max-width: 350px;
 }
