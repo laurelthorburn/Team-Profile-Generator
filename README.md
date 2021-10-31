@@ -24,9 +24,9 @@ The purpose of this project was to create a command-line generated team profile 
 <a name="usersection"></a>
 ## User Story
 ```
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
 ```
 
 <a name="acceptancesection"></a>
