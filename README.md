@@ -110,7 +110,7 @@ git push origin yourname-branch
 ```
 npm run test
 ```
-  3. Confirm all four test folders pass. Test folders are located in the tests folder and are titled: Employee.test.js, Engineer.test.js, Intern.test.js, and Manager.test.js
+  3. Confirm all four test files pass (see screenshot below). Test files are located in the tests folder and are titled: Employee.test.js, Engineer.test.js, Intern.test.js, and Manager.test.js
 
   <a name="questionssection"></a>
 ## Questions?
@@ -128,4 +128,5 @@ npm run test
 
   <a name="creditsection"></a>
 ## Resources/Credit
-* Coming soon
+* https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
+* Fellow coder champion: [Ryan Paragas!](https://github.com/ParagasR)
