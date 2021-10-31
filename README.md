@@ -2,7 +2,7 @@
 
 <a name="descsection"></a>
 ## Description
-The purpose of this project was to create a command-line generated, time efficient, high-quality README.md using node.js.  The user is prompted with a series of questions that will be added to their final generated README.  Questions include app/project description, how to use the app, how to install it, how to report issues, licensing, and how to make contributions and report issues.  
+The purpose of this project was to create a command-line generated team profile generator using node.js.  The user is prompted with a series of questions that will be added to their final generated HTML page.  Questions are broken down into manager role and optional engineer and intern questions.  The user may add as many engineers and interns as they would like and may select the option of "Finish building my team" in order to generate their final product.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
