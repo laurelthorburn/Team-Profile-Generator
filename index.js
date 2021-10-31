@@ -27,7 +27,7 @@ function promptContinue(){
   } else {
     //calling file and then calling function w/in said file
     generate.generateHTML(employeeArray);
-    console.log("great job building your team")
+    console.log("Great job building your team!")
   }
 })
 };

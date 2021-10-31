@@ -61,7 +61,7 @@ htmlText += `</div></body></html>` //check, might have too many div's lol
 
 fs.writeFileSync('./dist/index.html', htmlText);
 
-console.log("Your team is now on display, navigate to the folder 'dist' and then click 'index.html'.  Great work!")
+console.log("Your team is now on display, navigate to the folder 'dist' and then click 'index.html'.  ")
 
 }
 

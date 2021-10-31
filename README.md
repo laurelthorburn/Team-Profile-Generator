@@ -55,24 +55,25 @@ THEN I exit the application, and the HTML is generated
 ## Installation
 * Clone the repository using:
 ```
-git clone https://github.com/laurelthorburn/ReadMe.git
+git clone https://github.com/laurelthorburn/Team-Profile-Generator.git
 ```
 * Ensure you are in the current working directory
-* Install dependencies by opening the terminal (ctrl + j on windows) and running:
+* Install dependencies (jest and inquirer) by opening the terminal (ctrl + j on windows) and running:
 ```
 npm install
 ```
 * Run the project by typing the following in the terminal:
 ```
-npm start OR node index.js
+node index.js
 ```
 
 
 <a name="usagesection"></a>
 ## Usage
 * In order to access the user questions, open the terminal (right click index.js and click 'open in integrated terminal')
-* Answer all prompted questions until the terminal reads "Successfully wrote to README.md"
-* In the sidebar of the current directory, open the newly generated README.md.
+* Answer all prompted questions until the terminal reads "Your team is now on display, navigate to the folder 'dist' and then click 'index.html'. Great job building your team!"
+* In the sidebar of the current directory, open the dist folder and click the newly generated index.html
+* To view the index.html, right click on the file and select "open with live server"
 
 <a name="licensesection"></a>
 ## License
