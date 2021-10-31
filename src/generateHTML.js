@@ -8,13 +8,15 @@ var htmlText =  `<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ca6e5b2cf1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Assets/style.css">
     <title>Team Generator</title>
 </head>
 <body>
 
     <header>
-      My Team  
+    <i class="fas fa-briefcase"></i> My Team  
     </header>
     
 <div class="row row-cols-1 row-cols-md-2">\n`
@@ -29,8 +31,15 @@ employeeArray.forEach(element => {
     htmlText += ` <div class="col mb-4">
     <div class="card">
       <div class="card-header">
-            ${element.getName()} <br>
-              Employer Icon & ${element.getRole()}
+            ${element.getName()} <br>\n`
+            if(element.getRole() === "Manager"){
+            htmlText += `<i class="fas fa-mug-hot"></i>`
+            } else if(element.getRole() === "Engineer"){
+                htmlText += `<i class="fas fa-glasses"></i>`
+            } else if(element.getRole() === "Intern"){
+                htmlText += `<i class="fas fa-user-graduate"></i>`
+            }
+            htmlText += ` ${element.getRole()}
       </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">
