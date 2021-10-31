@@ -120,19 +120,12 @@ npm run test
   
   <a name="videosection"></a>
 ## Video
-  View video: https://drive.google.com/file/d/1WloXPkNJA3bSjDiqrrdoGT2p4iOftRo6/view?usp=sharing
+  View video: COMING SOON
 
   <a name="picsection"></a>
   ## Screenshots
-  ![Screenshot of ReadMe](./Media/screenshot1.png)
-  ![Screenshot of ReadMe](./Media/screenshot2.png)
-  ![Screenshot of ReadMe](./Media/screenshot3.png)
+  ![Screenshot of Test Screen](./dist/Assets/Images/screenshot1.png)
 
   <a name="creditsection"></a>
 ## Resources/Credit
-* https://gist.github.com/ckib16/8732561535ed766cd6b8
-* https://opensource.org/licenses/MIT
-* https://stackoverflow.com/questions/55619992/how-to-get-my-if-else-statements-to-work-properly-in-this-node-file-using-inqu
-* https://community.atlassian.com/t5/Bitbucket-questions/How-to-write-a-table-of-contents-in-a-Readme-md/qaq-p/673363
-* https://github.com/rahuldkjain/github-profile-readme-generator
-* https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+* Coming soon
