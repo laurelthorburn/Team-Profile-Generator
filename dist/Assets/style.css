@@ -17,7 +17,9 @@ header {
 
 .card-header {
     background-color: rgba(95, 158, 160, 0.632);
-    color: whitesmoke
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'DM Serif Display', serif;
 }
 
 .row{
