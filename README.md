@@ -120,7 +120,7 @@ npm run test
   
   <a name="videosection"></a>
 ## Video
-  View video: COMING SOON
+  View video:https://drive.google.com/file/d/1WWoh5HfNbHgMmtJ4DR57lQ-1x9PrR4KR/view?usp=sharing
 
   <a name="picsection"></a>
   ## Screenshots
