@@ -127,6 +127,7 @@ npm run test
   ## Screenshots
   ![Screenshot of Test Screen](./dist/Assets/Images/screenshot1.png)
   ![Screenshot of Sample Site](./dist/Assets/Images/screenshot2.png)
+  ![Screenshot of Terminal](./dist/Assets/Images/screenshot3.png)
 
   <a name="linksection"></a>
   ## Links
