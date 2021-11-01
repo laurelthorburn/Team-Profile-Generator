@@ -121,7 +121,7 @@ npm run test
   
   <a name="videosection"></a>
 ## Video
-  View video:https://drive.google.com/file/d/1WWoh5HfNbHgMmtJ4DR57lQ-1x9PrR4KR/view?usp=sharing
+  View video:https://drive.google.com/file/d/1m4HiXOib8MI8ZAha6zgAj42IsbLn_PDw/view?usp=sharing
 
   <a name="picsection"></a>
   ## Screenshots
@@ -132,6 +132,7 @@ npm run test
   ## Links
 
   Deployed SAMPLE Site: https://laurelthorburn.github.io/Team-Profile-Generator/
+  
   Github Site: https://github.com/laurelthorburn/Team-Profile-Generator
 
   <a name="creditsection"></a>
