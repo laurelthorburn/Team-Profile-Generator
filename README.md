@@ -19,7 +19,8 @@ The purpose of this project was to create a command-line generated team profile 
 9. [ Questions. ](#questionssection)
 10. [ Video. ](#videosection)
 11. [ Screenshots. ](#picsection)
-12. [ Resources/Credit. ](#creditsection)
+12. [ Links. ](#linksection)
+13. [ Resources/Credit. ](#creditsection)
 
 <a name="usersection"></a>
 ## User Story
@@ -126,6 +127,12 @@ npm run test
   ## Screenshots
   ![Screenshot of Test Screen](./dist/Assets/Images/screenshot1.png)
   ![Screenshot of Sample Site](./dist/Assets/Images/screenshot2.png)
+
+  <a name="linksection"></a>
+  ## Links
+
+  Deployed SAMPLE Site: https://laurelthorburn.github.io/Team-Profile-Generator/
+  Github Site: https://github.com/laurelthorburn/Team-Profile-Generator
 
   <a name="creditsection"></a>
 ## Resources/Credit
