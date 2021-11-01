@@ -125,6 +125,7 @@ npm run test
   <a name="picsection"></a>
   ## Screenshots
   ![Screenshot of Test Screen](./dist/Assets/Images/screenshot1.png)
+  ![Screenshot of Sample Site](./dist/Assets/Images/screenshot2.png)
 
   <a name="creditsection"></a>
 ## Resources/Credit
