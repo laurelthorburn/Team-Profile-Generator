@@ -139,4 +139,4 @@ npm run test
   <a name="creditsection"></a>
 ## Resources/Credit
 * https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
-* Fellow coder champion: [Ryan Paragas!](https://github.com/ParagasR)
+* Fellow coder champion += [Ryan Paragas!](https://github.com/ParagasR)
